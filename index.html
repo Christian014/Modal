@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconect e Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>IMC</title>
+
+    <!-- Script -->
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+<main>
+    <div class="error open">
+        <p>Digite Somente Numeros</p>
+    </div>
+
+    <div class="container-card">
+
+        <div class="card">
+            <h1>Cálculo de IMC</h1>
+
+            <div class="input-label">
+
+                
+                    <label for="weight">Peso (kg)</label>
+                    <input id="weight"
+                    type="text"
+                     placeholder="60">
+
+                    <label class="height" for="height">Altura (m)</label>
+                    <input id="height"
+                    type="text"
+                    placeholder="165">
+
+                <div class="button-img">
+                    <button id="buttonImc" type="submit" >Calcular IMC <img src="image/image.svg" alt="seta apontando para direita" ></button>
+                    
+                 </div>
+                
+                
+                 
+                 
+            </div>
+
+            
+        </div>
+
+    </div>
+
+    <div class="modal-container open ">
+        <div class="modal-content">
+            <div class="modal-title">
+                <h2 class="h2Imc">Seu IMC é de 28</h2>
+                <button class="close"><img class="image-button" src="image/closet.svg" alt=""></button>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+    
+</body>
+</html>

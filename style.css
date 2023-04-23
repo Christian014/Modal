@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #040924;
+}
+
+/* Variaveis */
+:root{
+    font-size: 62.5%;
+
+    /* Cores */
+    --title-h1: #0C3440;
+    --title-label: #00453A;
+    --background-input: #DCE2E9;
+    --color-placeholder: rgba(73, 80, 87, 0.5);
+    --color-button: #FFFFFF;
+    --background-button: #02799D;
+    --background-error: #F03E3E;
+
+    /* Fontes */
+    --h1-button:'Roboto';
+    --label:'Roboto';
+}
+
+/* Container */
+.container-card{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+/* Card */
+.container-card .card{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 43.0rem;
+
+    background: var(--color-button);
+
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    gap: 3.2rem;
+
+    border-radius: .6rem;
+}
+
+
+
+.card h1{
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+
+    font-family: var(--h1-button);
+    font-weight: 700;
+
+    color: var(--title-h1);
+}
+
+/* Input */
+.card .input-label{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-label .height{
+    margin-top: 1.6rem;
+}
+
+.input-label label{
+    color: var(--title-label);
+
+    font-family: var(--label);
+    font-weight: 400;
+    font-size: 1.4rem;
+    display: block;
+    padding-bottom: .8rem;
+}
+
+.input-label input{
+    width: 30.0rem;
+    height: 5.2rem;
+
+    padding-left: 1rem;
+
+    border-radius: .5rem;
+    border: none;
+
+    background: var(--background-input);
+
+}
+
+.input-label input::placeholder{
+    font-weight: 700;
+    font-family: var(--h1-button);
+}
+
+.input-label input:focus{
+    outline: 1px solid #00453A ;
+}
+
+/* Button */
+
+
+
+.input-label button{
+    margin-top: 3.2rem;
+    height: 5.2rem;
+    width: 30.0rem;
+    gap: .8rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    background: var(--background-button);
+    color: var(--color-button);
+
+    font-family: var(--h1-button);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.input-label button:hover{
+    background: #03495f;
+}
+
+.button-img{
+    display: flex;
+    
+}
+
+.button-img img{
+    margin-top: -2px;
+}
+
+/* Modal */
+
+.modal-container{
+
+    position: absolute;
+    display: grid;
+    place-content: center;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal-title{
+    background: var(--color-button);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+    border-radius: .5rem;
+
+    width: 36.3rem;
+    height: 15.2rem;
+
+    display: grid;
+    place-content: center;
+    position: relative;
+
+}
+
+.modal-title h2{
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+
+    font-weight: 700;
+    font-family: var(--h1-button);
+}
+
+.modal-title img{
+    position: absolute;
+
+    top: 1.6rem;
+    right: 1.6rem;
+
+    transition: scale .3s;
+}
+.modal-title button {
+    border: none;
+}
+
+.modal-title button img:hover{
+    scale: 1.1;
+    cursor: pointer;
+}
+
+
+.modal-container.open{
+    visibility: hidden;
+}
+
+/* Error */
+.error{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    padding: .8rem 0;
+
+    font-family: var(--h1-button);
+    color: var(--color-button);
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    background: var(--background-error);
+    
+    text-align: center;
+
+    animation: topBottom;
+    animation-duration: 3s;
+    visibility: visible;
+}
+
+.error.open{
+    visibility: hidden;
+    opacity: 0;
+}
+
+@keyframes topBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
